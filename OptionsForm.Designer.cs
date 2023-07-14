@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.btnOK = new System.Windows.Forms.Button();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.chkPromptOnExit = new System.Windows.Forms.CheckBox();
+            this.grpDefaultBackcolor = new System.Windows.Forms.GroupBox();
+            this.optBackgroundDefault = new System.Windows.Forms.RadioButton();
+            this.optBackgroundWhite = new System.Windows.Forms.RadioButton();
+            this.grpDefaultBackcolor.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOK
@@ -42,13 +50,91 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(40, 41);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(63, 13);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "User Name:";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(105, 38);
+            this.txtUserName.MaxLength = 0;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(139, 20);
+            this.txtUserName.TabIndex = 2;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(304, 38);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // chkPromptOnExit
+            // 
+            this.chkPromptOnExit.AutoSize = true;
+            this.chkPromptOnExit.Location = new System.Drawing.Point(105, 79);
+            this.chkPromptOnExit.Name = "chkPromptOnExit";
+            this.chkPromptOnExit.Size = new System.Drawing.Size(142, 17);
+            this.chkPromptOnExit.TabIndex = 4;
+            this.chkPromptOnExit.Text = "Prompt to confirm on exit";
+            this.chkPromptOnExit.UseVisualStyleBackColor = true;
+            // 
+            // grpDefaultBackcolor
+            // 
+            this.grpDefaultBackcolor.Controls.Add(this.optBackgroundWhite);
+            this.grpDefaultBackcolor.Controls.Add(this.optBackgroundDefault);
+            this.grpDefaultBackcolor.Location = new System.Drawing.Point(105, 112);
+            this.grpDefaultBackcolor.Name = "grpDefaultBackcolor";
+            this.grpDefaultBackcolor.Size = new System.Drawing.Size(200, 72);
+            this.grpDefaultBackcolor.TabIndex = 5;
+            this.grpDefaultBackcolor.TabStop = false;
+            this.grpDefaultBackcolor.Text = "Default Picture Background Color";
+            // 
+            // optBackgroundDefault
+            // 
+            this.optBackgroundDefault.AutoSize = true;
+            this.optBackgroundDefault.Checked = true;
+            this.optBackgroundDefault.Location = new System.Drawing.Point(14, 19);
+            this.optBackgroundDefault.Name = "optBackgroundDefault";
+            this.optBackgroundDefault.Size = new System.Drawing.Size(84, 17);
+            this.optBackgroundDefault.TabIndex = 0;
+            this.optBackgroundDefault.TabStop = true;
+            this.optBackgroundDefault.Text = "Default Gray";
+            this.optBackgroundDefault.UseVisualStyleBackColor = true;
+            // 
+            // optBackgroundWhite
+            // 
+            this.optBackgroundWhite.AutoSize = true;
+            this.optBackgroundWhite.Location = new System.Drawing.Point(14, 42);
+            this.optBackgroundWhite.Name = "optBackgroundWhite";
+            this.optBackgroundWhite.Size = new System.Drawing.Size(53, 17);
+            this.optBackgroundWhite.TabIndex = 1;
+            this.optBackgroundWhite.Text = "White";
+            this.optBackgroundWhite.UseVisualStyleBackColor = true;
+            // 
             // OptionsForm
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.grpDefaultBackcolor);
+            this.Controls.Add(this.chkPromptOnExit);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -58,12 +144,22 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Picture Viewer Options";
+            this.grpDefaultBackcolor.ResumeLayout(false);
+            this.grpDefaultBackcolor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox chkPromptOnExit;
+        private System.Windows.Forms.GroupBox grpDefaultBackcolor;
+        private System.Windows.Forms.RadioButton optBackgroundWhite;
+        private System.Windows.Forms.RadioButton optBackgroundDefault;
     }
 }
